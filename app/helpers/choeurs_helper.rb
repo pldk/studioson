@@ -1,0 +1,2 @@
+module ChoeursHelper
+end

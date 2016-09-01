@@ -1,9 +1,51 @@
 Rails.application.routes.draw do
+  get 'choeurs/index'
+
+  get 'choeurs/new'
+
+  get 'choeurs/create'
+
+  get 'choeurs/show'
+
+  get 'choeurs/edit'
+
+  get 'choeurs/update'
+
+  get 'choeurs/destroy'
+
+  get 'studios/index'
+
+  get 'studios/new'
+
+  get 'studios/create'
+
+  get 'studios/show'
+
+  get 'studios/edit'
+
+  get 'studios/update'
+
+  get 'studios/destroy'
+
+  get 'pages/about'
+
+  get 'pages/calendar'
+
+  get 'pages/studio'
+
+  get 'pages/choeurs'
+
+  get 'contact', to: 'messages#new', as: 'contact'
+  post 'contact', to: 'messages#create'
+
+  resources :studios
+  resources :choeurs
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'pages#about'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
