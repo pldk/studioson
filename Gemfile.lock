@@ -69,6 +69,10 @@ GEM
       thor (~> 0.14)
     font-awesome-rails (4.6.3.1)
       railties (>= 3.2, < 5.1)
+    fullcalendar-rails (2.8.0.0)
+      jquery-rails (>= 4.0.5, < 5.0.0)
+      jquery-ui-rails (>= 5.0.2)
+      momentjs-rails (>= 2.9.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -102,6 +106,8 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
+    momentjs-rails (2.11.1)
+      railties (>= 3.1)
     multi_json (1.12.1)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
@@ -162,8 +168,6 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    simple_calendar (2.1.5)
-      rails (>= 3.0)
     simple_form (3.3.1)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
@@ -204,6 +208,7 @@ DEPENDENCIES
   faker
   figaro
   font-awesome-rails
+  fullcalendar-rails
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
@@ -212,6 +217,7 @@ DEPENDENCIES
   launchy (~> 2.4, >= 2.4.3)
   letter_opener
   mail_form
+  momentjs-rails
   nokogiri (~> 1.6.8.rc2)
   pg (~> 0.15)
   pry-byebug
@@ -220,7 +226,6 @@ DEPENDENCIES
   rails_12factor
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
-  simple_calendar (~> 2.0)
   simple_form
   spring
   turbolinks

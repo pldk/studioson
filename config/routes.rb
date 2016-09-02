@@ -1,31 +1,5 @@
 Rails.application.routes.draw do
-  get 'choeurs/index'
-
-  get 'choeurs/new'
-
-  get 'choeurs/create'
-
-  get 'choeurs/show'
-
-  get 'choeurs/edit'
-
-  get 'choeurs/update'
-
-  get 'choeurs/destroy'
-
-  get 'studios/index'
-
-  get 'studios/new'
-
-  get 'studios/create'
-
-  get 'studios/show'
-
-  get 'studios/edit'
-
-  get 'studios/update'
-
-  get 'studios/destroy'
+  get 'calendars/show'
 
   get 'pages/about'
 
@@ -35,8 +9,12 @@ Rails.application.routes.draw do
 
   get 'pages/choeurs'
 
-  get 'contact', to: 'messages#new', as: 'contact'
-  post 'contact', to: 'messages#create'
+  get 'contact', to: 'contacts#new', as: 'contact'
+  post 'contact', to: 'contacts#create'
+
+  get 'pages/contacted'
+
+  resource :calendars, only: [:show], controller: :calendar
 
   resources :studios
   resources :choeurs

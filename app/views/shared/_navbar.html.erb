@@ -15,9 +15,12 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="<%= 'active' if current_page?(pages_about_path) %>"><%= link_to "About Us", pages_about_path %>  <span class="sr-only">(current)</span></li>
-        <li class="<%= 'active' if current_page?(pages_calendar_path) %>"><%= link_to "Calendar", pages_calendar_path %></li>
+        <li class="<%= 'active' if current_page?(calendars_show_path) %>"><%= link_to "Calendar", calendars_show_path %></li>
+        <li class="<%= 'active' if current_page?(studios_path) %>"><%= link_to "Studio", studios_path %></li>
+        <li class="<%= 'active' if current_page?(choeurs_path) %>"><%= link_to "Choeurs", choeurs_path%></li>
+        <li class="<%= 'active' if current_page?(contact_path) %>"><%= link_to "Contact", contact_path %></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Book now <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our work <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li role="separator" class="divider"></li>
             <li><%= link_to "Studio", studios_path %></li>

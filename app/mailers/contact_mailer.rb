@@ -1,5 +1,5 @@
 class ContactMailer < ApplicationMailer
-	default from: "Your Mailer <noreply@yourdomain.com>"
+	# default from: "Your Mailer <noreply@yourdomain.com>"
   	default to: "Your Name <your.email@yourdomain.com>"
 
   	def new_message(message)

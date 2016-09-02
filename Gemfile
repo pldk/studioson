@@ -15,7 +15,9 @@ gem 'jquery-turbolinks'
 gem 'figaro'
 
 #calendar
-gem "simple_calendar", "~> 2.0"
+# gem "simple_calendar", "~> 2.0"
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -51,13 +53,13 @@ group :development, :test do
   gem "quiet_assets"
   gem "pry-byebug"
   gem "faker"
-  gem "letter_opener"
+  
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
+  gem "letter_opener"
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end

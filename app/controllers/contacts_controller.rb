@@ -7,8 +7,8 @@ class ContactsController < ApplicationController
 		@contact = Contact.new(contact_params)
 
 		if @contact.valid?
-			ContactMailer.new_message(@message).deliver
-			redirect_to contact_path, notice: "Your message has been sent."
+			ContactMailer.new_message(@contact).deliver_now
+			redirect_to pages_contacted_path, notice: "Thank you! Your message has been sent."
 		else
 			flash[:alert] = "An error has occurred while deliveringthis message."
 			render :new
@@ -18,6 +18,6 @@ class ContactsController < ApplicationController
 	private
 
 	def contact_params
-		params.require(:message).permit(:name, :email, :content)
+		params.require(:contact).permit(:name, :email, :content)
 	end
 end
