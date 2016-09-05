@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'calendars/show'
 
   get 'pages/about'
 
@@ -14,7 +13,7 @@ Rails.application.routes.draw do
 
   get 'pages/contacted'
 
-  resource :calendars, only: [:show], controller: :calendar
+  resource :calendar, only: [:show], controller: :calendar
 
   resources :studios
   resources :choeurs
